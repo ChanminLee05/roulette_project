@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-background {
+    background: url('../Assets/main.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 919px;
+}
+
+.food-background {
+    background: url('../Assets/food.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 919px;
+    /*width: 100%;*/
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #DB7C3C;
+    cursor: default;
+    margin-top: 10vw;
+}
+
+.linkButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+}
+
+.btn {
+    background-color: #0e6a6d55;
+    border-radius: 10px;
+    box-shadow: 5px 4px 8px rgb(0,0,0,1);
+    margin: 2vw;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(2, 29, 51, 0.33);
+    transform: scale(1.1);
+}
+
+.btntxt {
+    font-size: 50px;
+    padding: 0 40px;
+    letter-spacing: 2px;
+    color: #3FDB95;
+}
+

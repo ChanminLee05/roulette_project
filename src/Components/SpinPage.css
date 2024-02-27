@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-background {
+    background: url('../Assets/main.jpg') no-repeat fixed;
+    background-size: cover;
+}
+
+.food-background {
+    background: url('../Assets/food.jpg') no-repeat fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.back-img {
+    width: 5vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 40px;
+    margin: 5vw 5vw 0 90vw;
+}
+
+.roulette-container {
+    cursor: default;
+}
+
+.roulette-title {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    color: #FF5733;
+}
+
+.wheel-container {
+    display: flex;
+}
+
+.wheel {
+    position: absolute;
+    top: 20vw;
+    left: 37vw;
+    width: 23vw;
+    height: 23vw;
+    border-radius: 50%;
+    border: 2px solid #000;
+    overflow: hidden;
+    transition: transform 3s ease-in-out;
+}
+
+.spinButton {
+    position: absolute;
+    width: 3.1vw;
+    height: 3.1vw;
+    top: 30vw;
+    left: 47vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 0.1em;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.spinButton::before {
+    content: '';
+    position: absolute;
+    bottom: 3vw;
+    left: 0.92vw;
+    width: 1.1vw;
+    height: 1.6vw;
+    background: #ffffff;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.roulette-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: bottom right;
+    clip-path: polygon(0 0, 45% 0, 100% 100%, 0 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.roulette-item span {
+    position: relative;
+    transform: rotate(30deg);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
