@@ -1,0 +1,118 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 6vw;
+    height: 25%;
+    margin: 15vw 0 0 3vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.modal-content {
+    width: 30vw;
+    position: relative;
+}
+
+.side-btn {
+    background-color: white;
+    border: none;
+    width: 4vw;
+    margin-top: 2vw;
+}
+
+.icon-img {
+    width: 2vw;
+    height: 2vw;
+}
+
+.forum-img {
+    width: 3vw;
+    height: 2.5vw;
+}
+
+.form-control {
+    border: none;
+}
+
+.search-filter {
+    margin-top: 1vw;
+    width: 70%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.forum-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.3vw;
+
+}
+
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+    width: 27vw;
+}
+
+.offcanvas-title {
+    font-size: 2.2vw;
+}
+
+.line-break {
+    height: 1px;
+    background-color: #a2a0a0;
+    width: 100%;
+}
+
+.com-container {
+    margin-top: 2vw;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    font-size: 1vw;
+}
+
+.body-txt {
+    font-size: 1.2vw;
+}
+
+.sub-card {
+    margin-bottom: 2vw;
+
+}
+
+.card-title {
+    font-size: 1.2vw;
+}
+
+.card-text {
+    font-size: 1vw;
+}
+
+.foot-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5vw;
+}
+
+.com-img {
+    width: 21vw;
+    height: 12vw;
+    margin: 1vw 0 1vw 1vw;
+}
+
+.com-btn:hover {
+    background-color: #61dafb;
+}

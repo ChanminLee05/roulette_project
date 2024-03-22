@@ -9,16 +9,16 @@ export default function MainPage() {
         setFoodBackground(!isFoodBackground);
     }
 
-    console.log('Current image', isFoodBackground);
     return(
         <div className={isFoodBackground ? "food-background" : "main-background"}>
             <div className="title-container">
                 <h1 className="title">Click The Type Of Food You Want</h1>
             </div>
             <div className="linkButton">
-                <Link to="/rice" className="btn" onClick={changeBackgroundImg}><p className="btntxt">RICE</p></Link>
-                <Link to="/noodle" className="btn" onClick={changeBackgroundImg}><p className="btntxt">NOODLE</p></Link>
-                <Link to="/bread" className="btn" onClick={changeBackgroundImg}><p className="btntxt">BREAD</p></Link>
+                <Link to="/bread" className="link-btn" onClick={changeBackgroundImg}><p className="btn-txt">Bread</p></Link>
+                <Link to="/meat" className="link-btn" onClick={changeBackgroundImg}><p className="btn-txt">Meat</p></Link>
+                <Link to="/vegan" className="link-btn" onClick={changeBackgroundImg}><p className="btn-txt">Vegan</p></Link>
+                <Link to="/noodle" className="link-btn" onClick={changeBackgroundImg}><p className="btn-txt">Noodle</p></Link>
             </div>
         </div>
     )

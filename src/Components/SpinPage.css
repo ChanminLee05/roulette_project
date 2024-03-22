@@ -1,22 +1,50 @@
-.main-background {
-    background: url('../Assets/main.jpg') no-repeat fixed;
-    background-size: cover;
-}
-
 .food-background {
-    background: url('../Assets/food.jpg') no-repeat fixed;
-    background-size: cover;
+    display: flex;
+    position: relative;
+    background-color: #f3eadd;
+    height: 100vh;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-
+.food-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(238, 238, 100, 0.8);
+    z-index: 1;
+    clip-path: ellipse(40% 55% at 10% 50%);
 }
 
 .header-container {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+}
+
+.roulette-container {
+    cursor: default;
+    margin: 5vw 30vw 0 5vw;
+    z-index: 3;
+}
+
+.roulette-title {
+    font-size: 4vw;
+    font-weight: 800;
+    text-align: start;
+    color: #FF5733;
+    width: 40vw;
+}
+
+.roulette-desc {
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    width: 35vw;
+}
+
+.img-container {
+    height: 8vw;
+    position: relative;
+    left: 9.5vw;
 }
 
 .back-img {
@@ -24,52 +52,38 @@
     height: 5vw;
     background-color: white;
     border-radius: 40px;
-    margin: 5vw 5vw 0 90vw;
-}
-
-.roulette-container {
-    cursor: default;
-}
-
-.roulette-title {
-    font-size: 4rem;
-    font-weight: 800;
-    text-align: center;
-    color: #FF5733;
-}
-
-.wheel-container {
-    display: flex;
+    margin: 3vw 1vw 0 4vw;
 }
 
 .wheel {
     position: absolute;
-    top: 20vw;
-    left: 37vw;
-    width: 23vw;
-    height: 23vw;
+    top: 11vw;
+    left: 57vw;
+    width: 27vw;
+    height: 27vw;
     border-radius: 50%;
     border: 2px solid #000;
     overflow: hidden;
     transition: transform 3s ease-in-out;
+    z-index: 3;
 }
 
 .spinButton {
     position: absolute;
     width: 3.1vw;
     height: 3.1vw;
-    top: 30vw;
-    left: 47vw;
+    top: 23vw;
+    left: 69vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 4;
     text-transform: uppercase;
     font-weight: 600;
     color: black;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1vw;
     border: 1px solid black;
     cursor: pointer;
     user-select: none;
@@ -103,8 +117,9 @@
 
 .roulette-item span {
     position: relative;
-    transform: rotate(30deg);
-    font-size: 1rem;
+    transform: rotate(45deg);
+    font-size: 1.1vw;
     font-weight: 500;
     color: #ffffff;
+    margin-left: 1.5vw;
 }
