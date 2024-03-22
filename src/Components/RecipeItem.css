@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Vidaloka&display=swap');
+
+.card-container {
+    display: flex;
+    margin-top: 3vw;
+    column-gap: 3vw;
+}
+
+.card {
+    border: none;
+}
+
+.card-img {
+    width: 10vw;
+    height: 8vw;
+}
+
+.card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 17vw;
+}
+
+.card-txt {
+    font-size: 1.1vw;
+    cursor: default;
+    font-family: "Vidaloka", serif;
+}
+
+.category {
+    font-size: 1.3vw;
+    margin-right: 1vw;
+    font-family: "Courgette", cursive;
+}
+
+.food-link {
+    text-decoration: none;
+    color: #70dc34;
+}
+
+.link-txt {
+    font-size: 2vw;
+}
+
+.heart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+}
+
+.heart-img {
+    width: 1.5vw;
+    height: 1.5vw;
+}

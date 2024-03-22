@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackside+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Vidaloka&display=swap');
+
+
+.recipe-background {
+    background: url("../Assets/pageimg.jpg") no-repeat;
+    background-size: cover;
+    padding: 1vh 10vh;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 5vw 20vw 5vw 20vw;
+    background-color: white;
+}
+
+/*top part*/
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-title {
+    text-align: center;
+    font-size: 4vw;
+    margin: 2vw;
+    font-family: "Slackside One", cursive;
+}
+
+.top-category {
+    font-family: "Courgette", cursive;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.top-subCat {
+    font-family: "Vidaloka", serif;
+    font-size: 1.2vw;
+}
+
+.top-img {
+    width: 35vw;
+    height: 25vw;
+    position: relative;
+    top: 2vw;
+    left: 23%;
+}
+
+/*mid part*/
+.mid {
+    margin: 2vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.mid-txt {
+    font-size: 2vw;
+
+}
+
+.mid-list {
+    list-style-type: none;
+}
+
+.mid-item {
+    font-size: 1.1vw;
+}
+
+.break-line {
+    height: 1px;
+    background-color: #a2a0a0;
+    width: 90%;
+}
+
+.measure {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.txt2 {
+
+}
+/*bottom part*/
+.bottom {
+    margin: 0 2vw 2vw 2vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.bottom-title {
+    font-size: 2vw;
+}
+
+.bottom-txt {
+    font-size: 1vw;
+}
