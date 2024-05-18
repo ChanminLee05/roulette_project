@@ -10,7 +10,6 @@ export default function SearchBar({ value}) {
     const [recipes, setRecipes] = useState([]);
 
     const SearchRecipes = async () => {
-        if (!query) return;
         setIsLoading(true);
         const url = apiUrl + query;
         try {
