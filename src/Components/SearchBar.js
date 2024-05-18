@@ -10,10 +10,14 @@ export default function SearchBar({ value}) {
     const [recipes, setRecipes] = useState([]);
 
     const SearchRecipes = async () => {
+        if (!query) return;
         setIsLoading(true);
         const url = apiUrl + query;
         try {
             const res = await fetch(url);
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
             const data = await res.json();
             setRecipes(data.meals);
         } catch (error) {
@@ -24,8 +28,7 @@ export default function SearchBar({ value}) {
     }
 
     useEffect(() => {
-        SearchRecipes().then(r => {
-            console.error("Error fetching data")});
+        SearchRecipes();
     }, [query]);
 
     const handleSubmit = async event => {
