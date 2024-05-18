@@ -11,7 +11,9 @@ export default function RecipePage() {
         const fetchMealDetails = async () => {
             try {
                 const res = await fetch(apiUrl + idMeal);
+                console.log("Response status:", res.status);
                 const data = await res.json();
+                console.log("Data:", data);
                 setMealDetails(data.meals[0]);
             } catch (error) {
                 console.error('Error fetching meal details:', error);
@@ -38,52 +40,52 @@ export default function RecipePage() {
     }
 
     return (
-        <frame class="recipe-background">
-        <div className="box-container">
-            <div className="top">
-                <img src={strMealThumb} alt={strMeal} className="top-img"/>
-                <h2 className="top-title">{strMeal}</h2>
-                <h3 className="top-category">Category: <span className="top-subCat">{strCategory}</span></h3>
-                <h3 className="top-category">Country: <span className="top-subCat">{strArea}</span></h3>
-            </div>
-            <div className="mid">
-            <h3 className="mid-txt">Ingredients:</h3>
-                <div className="txt-container row m-2">
-                    <h5 className="col-6">[Ingredients]</h5>
-                    <h5 className="col-6">[Quantity]</h5>
+        <div className="recipe-background">
+            <div className="box-container">
+                <div className="top">
+                    <img src={strMealThumb} alt={strMeal} className="top-img"/>
+                    <h2 className="top-title">{strMeal}</h2>
+                    <h3 className="top-category">Category: <span className="top-subCat">{strCategory}</span></h3>
+                    <h3 className="top-category">Country: <span className="top-subCat">{strArea}</span></h3>
                 </div>
-                <ul className="mid-list row">
-                    {ingredientList.map((ingredient, index) => {
-                        return (
-                            <li key={index} className="mid-item col-6">
-                                <div className="row">
-                                <span className="ingredient col-6">{ingredient}</span>
-                                <div className="break-line"></div>
-                                </div>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
-            <div className="bottom">
-                <h3 className="bottom-title">Instructions</h3>
-                <p className="bottom-txt">
-                    {strInstructions.split('.')
-                        .filter(sentence => sentence.trim() !== '')
-                        .map((sentence, index) => {
-                            const formattedSentence = sentence.trim().replace(/^STEP \d/i, '');
-
+                <div className="mid">
+                <h3 className="mid-txt">Ingredients:</h3>
+                    <div className="txt-container row m-2">
+                        <h5 className="col-6">[Ingredients]</h5>
+                        <h5 className="col-6">[Quantity]</h5>
+                    </div>
+                    <ul className="mid-list row">
+                        {ingredientList.map((ingredient, index) => {
                             return (
-                                <React.Fragment key={index}>
-                                    {`STEP ${index + 1}. ${formattedSentence}`}
-                                    <br/>
-                                </React.Fragment>
-                            )
-                        })
-                    }
-                </p>
+                                <li key={index} className="mid-item col-6">
+                                    <div className="row">
+                                    <span className="ingredient col-6">{ingredient}</span>
+                                    <div className="break-line"></div>
+                                    </div>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+                <div className="bottom">
+                    <h3 className="bottom-title">Instructions</h3>
+                    <p className="bottom-txt">
+                        {strInstructions.split('.')
+                            .filter(sentence => sentence.trim() !== '')
+                            .map((sentence, index) => {
+                                const formattedSentence = sentence.trim().replace(/^STEP \d/i, '');
+
+                                return (
+                                    <React.Fragment key={index}>
+                                        {`STEP ${index + 1}. ${formattedSentence}`}
+                                        <br/>
+                                    </React.Fragment>
+                                )
+                            })
+                        }
+                    </p>
+                </div>
             </div>
         </div>
-        </frame>
     )
 }

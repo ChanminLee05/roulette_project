@@ -6,7 +6,6 @@ export default function RecipeItem({ recipe }) {
     // Destructure the {recipe} prop
     const { idMeal, strMeal, strCategory, strMealThumb } = recipe;
 
-    // State to track if the recipe is favorited
     const [isActive, setIsActive] = useState(false);
 
     function handleToggle() {
