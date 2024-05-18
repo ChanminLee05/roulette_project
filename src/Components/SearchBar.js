@@ -4,7 +4,7 @@ import "./SideBar.css";
 import RecipeItem from "./RecipeItem";
 
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-export default function SearchBar({ value, onChange }) {
+export default function SearchBar({ value}) {
     const [isLoading, setIsLoading] = useState(false);
     const [query, setQuery] =useState("");
     const [recipes, setRecipes] = useState([]);
@@ -24,12 +24,13 @@ export default function SearchBar({ value, onChange }) {
     }
 
     useEffect(() => {
-        SearchRecipes();
+        SearchRecipes().then(r => {
+            console.error("Error fetching data")});
     }, [query]);
 
     const handleSubmit = async event => {
         event.preventDefault();
-        SearchRecipes();
+        await SearchRecipes();
     };
 
     return (
