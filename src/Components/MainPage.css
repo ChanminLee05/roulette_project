@@ -82,3 +82,15 @@ body {
     color: #3FDB95;
 }
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+        margin-top: 3vw;
+    }
+
+    .btn-txt {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+}
