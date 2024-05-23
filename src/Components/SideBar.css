@@ -116,3 +116,79 @@
 .com-btn:hover {
     background-color: #61dafb;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .sidebar-container {
+        position: absolute;
+        left: 0;
+        top: 50vw;
+        width: 15vw;
+        margin: 5vw 0 0 2vw;
+    }
+
+    .side-btn {
+        width: 10vw;
+        margin-bottom: 2vw;
+    }
+
+    .icon-img {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .container {
+        margin-top: 1vw;
+    }
+
+    .modal-content {
+        width: 80vw;
+    }
+
+    .search-filter {
+        margin-top: 1vw;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .submit-btn {
+        font-size: 1.5rem;
+    }
+
+    .forum-container {
+        margin-left: 0.5vw;
+    }
+
+    .forum-img {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .com-img {
+        width: 67vw;
+        height: 40vw;
+        margin: 0;
+    }
+
+    .offcanvas.show:not(.hiding) {
+        width: 75vw;
+    }
+
+    .sub-card {
+        width: 68vw;
+    }
+
+    .body-txt {
+        font-size: 2.2vw;
+    }
+
+    .card-title {
+        font-size: 3vw;
+    }
+
+    .card-text {
+        font-size: 2vw;
+    }
+
+
+}
