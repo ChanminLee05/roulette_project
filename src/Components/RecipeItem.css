@@ -57,3 +57,37 @@
     width: 1.5vw;
     height: 1.5vw;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .card-img {
+        width: 25vw;
+        height: 15vw;
+    }
+
+    .category {
+        font-size: 3vw;
+    }
+
+    .card-txt {
+        font-size: 3vw;
+    }
+
+    .link-txt {
+        font-size: 3.5vw;
+    }
+
+    .heart-img {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .btn-danger {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .com-card-body {
+        width: 70vw;
+    }
+}

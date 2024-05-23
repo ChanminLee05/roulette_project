@@ -30,7 +30,7 @@ export default function SideBar() {
                             <div className="card-header">
                                 <h2>Online Food Blog Community</h2>
                             </div>
-                            <div className="card-body">
+                            <div className="card-body com-card-body">
                                 <div className="sub-card">
                                     <h5 className="card-title">Food Buzz</h5>
                                     <p className="card-text">We share award-winning  recipes from around the world</p>

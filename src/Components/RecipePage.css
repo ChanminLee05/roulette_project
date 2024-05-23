@@ -100,3 +100,51 @@
 .bottom-txt {
     font-size: 1vw;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .recipe-background {
+        padding: 2vh 0 20vh 0;
+    }
+
+    .box-container {
+        margin: 5vw;
+    }
+
+    .top-img {
+        width: 45vw;
+        height: 30vw;
+        left: 25%;
+        top: 4vw;
+    }
+
+    .top-title {
+        font-size: 6vw;
+        margin: 4vw;
+    }
+
+    .top-category {
+        font-size: 2.2vw;
+    }
+
+    .top-subCat {
+        font-size: 3vw;
+        margin-left: 1vw;
+    }
+
+    .mid-txt {
+        font-size: 3vw;
+    }
+
+    .ingredient {
+        font-size: 2.2vw;
+    }
+
+    .bottom-title {
+        font-size: 3vw;
+    }
+
+    .bottom-txt {
+        font-size: 2.2vw;
+    }
+}
