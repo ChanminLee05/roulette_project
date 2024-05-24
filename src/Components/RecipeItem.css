@@ -4,7 +4,7 @@
 .card-container {
     display: flex;
     margin-top: 3vw;
-    column-gap: 3vw;
+    column-gap: 2vw;
 }
 
 .card {
@@ -16,12 +16,10 @@
     height: 8vw;
 }
 
-.card-body {
+.recipe-card-body {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
-    width: 17vw;
 }
 
 .card-txt {
@@ -59,7 +57,7 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     .card-img {
         width: 25vw;
         height: 15vw;
@@ -85,9 +83,5 @@
     .btn-danger {
         width: 3vw;
         height: 3vw;
-    }
-
-    .com-card-body {
-        width: 70vw;
     }
 }

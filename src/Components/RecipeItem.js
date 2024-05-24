@@ -17,7 +17,7 @@ export default function RecipeItem({ recipe }) {
             <div className="card">
                 <img src={strMealThumb} alt={strMeal} className="card-img"/>
             </div>
-            <div className="card-body">
+            <div className="card-body recipe-card-body">
                 <span className="card-txt"><i className="category">Category:</i> {strCategory}</span>
                 <a href={`/recipe/${idMeal}`} target="_blank" rel="noopener noreferrer" className="food-link">
                     <h3 className="link-txt">{strMeal}</h3>

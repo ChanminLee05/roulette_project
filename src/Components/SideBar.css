@@ -1,37 +1,35 @@
 .sidebar-container {
     display: flex;
     flex-direction: column;
-    width: 6vw;
-    height: 25%;
-    margin: 15vw 0 0 3vw;
+    margin-left: 5vw;
+    row-gap: 3vw;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 1vw;
-}
-
-.modal-content {
-    width: 30vw;
-    position: relative;
 }
 
 .side-btn {
     background-color: white;
     border: none;
-    width: 4vw;
-    margin-top: 2vw;
+    width: 5vw;
+    height: 4vw;
 }
 
 .icon-img {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
 }
 
 .forum-img {
-    width: 3vw;
-    height: 2.5vw;
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.modal-content {
+    width: 30vw;
+    position: relative;
 }
 
 .form-control {
@@ -50,11 +48,14 @@
     border-radius: 5px;
 }
 
+.submit-btn:hover {
+    background: #beb9be linear-gradient(to bottom, #e0dae0 5%, #ededed 100%);
+}
+
 .forum-container {
     display: flex;
     flex-direction: column;
     margin-left: 0.3vw;
-
 }
 
 .offcanvas.show:not(.hiding), .offcanvas.showing {
@@ -75,22 +76,19 @@
     margin-top: 2vw;
 }
 
-.offcanvas-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-header {
-    font-size: 1vw;
+.card-header-title {
+    font-size: 1.5vw;
 }
 
 .body-txt {
     font-size: 1.2vw;
 }
 
-.sub-card {
-    margin-bottom: 2vw;
-
+.com-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1vw;
 }
 
 .card-title {
@@ -102,40 +100,70 @@
 }
 
 .foot-container {
+    position: relative;
+    display: inline-block;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.5vw;
 }
 
 .com-img {
-    width: 21vw;
-    height: 12vw;
-    margin: 1vw 0 1vw 1vw;
+    display: block;
+    width: 100%;
+    transition: opacity 0.3s ease;
 }
 
-.com-btn:hover {
-    background-color: #61dafb;
+.foot-container:hover .com-img {
+    opacity: 0.7;
+}
+
+.com-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.foot-container:hover .com-btn {
+    display:inline-block;
+    box-shadow:inset 0 1px 0 0 #d9fbbe;
+    background: #b8e356 linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+    border-radius:6px;
+    border:1px solid #83c41a;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #86ae47;
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     .sidebar-container {
         position: absolute;
-        left: 0;
+        left: 5vw;
         top: 70vw;
-        width: 15vw;
-        margin: 5vw 0 0 2vw;
+        flex-direction: row;
+        column-gap: 15vw;
+        margin: 2vw 10vw;
+    }
+
+    .container {
+        margin: 0;
     }
 
     .side-btn {
-        width: 10vw;
+        width: 18vw;
+        height: 13vw;
         margin-bottom: 2vw;
         z-index: 10;
     }
 
     .icon-img {
-        width: 5vw;
-        height: 5vw;
+        width: 10vw;
+        height: 10vw;
     }
 
     .container {
@@ -148,12 +176,12 @@
 
     .search-filter {
         margin-top: 1vw;
-        width: 80%;
-        font-size: 1.5rem;
+        width: 70%;
+        font-size: 4vw;
     }
 
     .submit-btn {
-        font-size: 1.5rem;
+        font-size: 4vw;
     }
 
     .forum-container {
@@ -161,8 +189,20 @@
     }
 
     .forum-img {
-        width: 6vw;
-        height: 6vw;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .offcanvas-title {
+        font-size: 6vw;
+    }
+
+    .body-txt {
+        font-size: 3.5vw;
+    }
+
+    .card-header-title {
+        font-size: 4vw;
     }
 
     .com-img {
@@ -175,20 +215,20 @@
         width: 75vw;
     }
 
+    .com-card-body {
+        row-gap: 2vw;
+    }
+
     .sub-card {
         width: 68vw;
     }
 
-    .body-txt {
-        font-size: 2.2vw;
-    }
-
     .card-title {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .card-text {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
 

@@ -28,7 +28,7 @@ export default function SideBar() {
                     <div className="body-container">
                         <div className="card com-container">
                             <div className="card-header">
-                                <h2>Online Food Blog Community</h2>
+                                <h2 className="card-header-title">Online Food Blog Community</h2>
                             </div>
                             <div className="card-body com-card-body">
                                 <div className="sub-card">
@@ -36,7 +36,7 @@ export default function SideBar() {
                                     <p className="card-text">We share award-winning  recipes from around the world</p>
                                     <div className="foot-container">
                                         <img className="com-img" src={FoodBuzz} alt={FoodBuzz}/>
-                                        <a href="https://simplysplendidfood.com/introduction/" className="btn btn-info com-btn d-grid" target="_blank" rel="noreferrer">Link</a>
+                                        <a href="https://simplysplendidfood.com/introduction/" className="btn com-btn" target="_blank" rel="noreferrer">Link</a>
                                     </div>
                                 </div>
                                 <div className="sub-card">
@@ -44,7 +44,7 @@ export default function SideBar() {
                                     <p className="card-text">Give Yourself a low-FODMAP Gut Check with Weekly Meal Planning</p>
                                     <div className="foot-container">
                                         <img className="com-img" src={FoodCandy} alt={FoodCandy}/>
-                                        <a href="https://foodcandy.com/" className="btn btn-info com-btn d-grid" target="_blank" rel="noreferrer">Link</a>
+                                        <a href="https://foodcandy.com/" className="btn com-btn" target="_blank" rel="noreferrer">Link</a>
                                     </div>
                                 </div>
                                 <div className="sub-card">
@@ -52,7 +52,7 @@ export default function SideBar() {
                                     <p className="card-text">The Place Where People Come For The Food</p>
                                     <div className="foot-container">
                                         <img className="com-img" src={BakeSpace} alt={BakeSpace}/>
-                                        <a href="https://www.bakespace.com/" className="btn btn-info com-btn d-grid" target="_blank" rel="noreferrer">Link</a>
+                                        <a href="https://www.bakespace.com/" className="btn com-btn" target="_blank" rel="noreferrer">Link</a>
                                     </div>
                                 </div>
                             </div>
