@@ -1,12 +1,13 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .main-background {
     background: url('../Assets/main.jpg') no-repeat fixed;
     background-size: cover;
-    height: 100vh;
+    min-height: 100%;
 }
 
 .main-background::before {
@@ -31,8 +32,9 @@ body {
 
 .title-container {
     display: flex;
-    justify-content: center;
-    position: relative;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .title {
@@ -55,10 +57,9 @@ body {
 
 .linkButton {
     display: flex;
-    justify-content: center;
-    margin-top: 5vw;
-    position: relative;
     flex-wrap: wrap;
+    margin-top: 15vh;
+    z-index: 5;
 }
 
 .link-btn {
@@ -83,14 +84,18 @@ body {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     .title {
-        font-size: 3rem;
-        margin-top: 3vw;
+        font-size: 12vw;
+        margin-top: 20vw;
+        text-align: center;
+    }
+
+    .linkButton {
+        justify-content: center;
     }
 
     .btn-txt {
-        font-size: 30px;
-        padding: 0 20px;
+        font-size: 7vw;
     }
 }

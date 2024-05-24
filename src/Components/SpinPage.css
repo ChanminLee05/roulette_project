@@ -1,8 +1,9 @@
 .food-background {
     display: flex;
-    position: relative;
+    align-items: center;
     background-color: #f3eadd;
-    height: 100vh;
+    min-height: 100%;
+    cursor: default;
 }
 
 .food-background::after {
@@ -14,37 +15,40 @@
     left: 0;
     background-color: rgba(238, 238, 100, 0.8);
     z-index: 1;
-    clip-path: ellipse(40% 55% at 10% 50%);
+    clip-path: ellipse(35% 55% at 10% 50%);
 }
 
-.header-container {
+/*Left-side*/
+.food-desc-container {
     display: flex;
+    z-index: 5;
+    height: 100vh;
 }
 
-.roulette-container {
-    cursor: default;
-    margin: 5vw 30vw 0 5vw;
-    z-index: 3;
+.food-txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
 .roulette-title {
     font-size: 4vw;
     font-weight: 800;
-    text-align: start;
     color: #FF5733;
     width: 40vw;
+    margin-left: 3vw;
 }
 
 .roulette-desc {
     margin-top: 2vw;
     font-size: 1.5vw;
     width: 35vw;
+    margin-left: 3vw;
 }
 
 .img-container {
-    height: 8vw;
-    position: relative;
-    left: 9.5vw;
+
 }
 
 .back-img {
@@ -52,34 +56,39 @@
     height: 5vw;
     background-color: white;
     border-radius: 40px;
-    margin: 3vw 1vw 0 4vw;
+    margin-top: 5vw;
+}
+
+/*Right-side*/
+.wheel-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .wheel {
-    position: absolute;
-    top: 11vw;
-    left: 57vw;
-    width: 27vw;
-    height: 27vw;
+    width: 35vw;
+    height: 35vw;
     border-radius: 50%;
     border: 2px solid #000;
     overflow: hidden;
     transition: transform 3s ease-in-out;
     z-index: 3;
+    margin-left: 2vw;
 }
 
 .spinButton {
     position: absolute;
-    width: 3.1vw;
-    height: 3.1vw;
-    top: 23vw;
-    left: 69vw;
+    width: 4vw;
+    height: 4vw;
+    top: 28vw;
+    left: 65.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
     border-radius: 50%;
-    z-index: 4;
+    z-index: 10;
     text-transform: uppercase;
     font-weight: 600;
     color: black;
@@ -89,15 +98,24 @@
     user-select: none;
 }
 
+.spinButton:hover {
+    background: #bab1ba linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+}
+
 .spinButton::before {
     content: '';
     position: absolute;
-    bottom: 3vw;
-    left: 0.92vw;
-    width: 1.1vw;
-    height: 1.6vw;
+    bottom: 3.8vw;
+    left: 1.1vw;
+    width: 1.7vw;
+    height: 2.5vw;
     background: #ffffff;
     clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.spinButton:hover::before {
+    background: #bab1ba linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+
 }
 
 .roulette-item {
@@ -118,73 +136,85 @@
 .roulette-item span {
     position: relative;
     transform: rotate(45deg);
-    font-size: 1.1vw;
+    font-size: 2vw;
     font-weight: 500;
     color: #ffffff;
     margin-left: 1.5vw;
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-    /* Adjust styles for screens smaller than 768px */
+@media screen and (max-width: 400px) {
+    .food-background {
+        flex-direction: column;
+    }
+
     .food-background::after {
         clip-path: ellipse(70% 25% at 50% 5%);
     }
 
-    .roulette-container {
-        display: flex;
-        flex-direction: column;
+    .food-desc-container {
+        height: 100%;
+    }
+
+    .food-txt-container {
         align-items: center;
-        text-align: center;
+        justify-content: inherit;
+        height: 30vh;
     }
 
     .roulette-title {
-        font-size: 5vw;
+        font-size: 8vw;
         text-align: center;
         width: 70vw;
+        margin: 6vw 0 2vw 0;
     }
 
     .roulette-desc {
-        font-size: 2.5vw;
+        font-size: 3vw;
         width: 80vw;
+        margin: 0;
+        text-align: center;
     }
 
     .img-container {
-        height: 10vw;
-        position: absolute;
-        left: 85%;
         z-index: 10;
     }
 
     .back-img {
-        width: 7vw;
-        height: 7vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .wheel-container {
+        height: 70vh;
     }
 
     .wheel {
-        top: 53vw;
-        left: 25vw;
-        width: 65vw;
-        height: 65vw;
+        width: 70vw;
+        height: 70vw;
+        margin: 0 0 7vw 0;
     }
 
     .spinButton {
-        width: 8vw;
-        height: 8vw;
-        top: 81.5vw;
-        left: 53.5vw;
-        font-size: 2vw;
+        width: 9vw;
+        height: 9vw;
+        top: 128vw;
+        left: 45.5vw;
+        font-size: 2.5vw;
+        font-weight: bold;
+        z-index: 10;
     }
 
     .spinButton::before {
-        bottom: 7.8vw;
-        left: 3vw;
-        width: 2vw;
-        height: 5vw;
+        bottom: 8.5vw;
+        left: 2.8vw;
+        width: 3vw;
+        height: 7vw;
+        border: 1px solid black;
     }
 
     .roulette-item span {
-        font-size: 2.5vw;
-        margin-left: 1vw;
+        font-size: 3vw;
+        margin-left: 2vw;
     }
 }

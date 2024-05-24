@@ -18,8 +18,8 @@ export default function Noodle() {
 
     return(
         <div className={isFoodBackground ? "food-background" : "main-background"}>
-            <div className="header-container">
-                <div className="roulette-container">
+            <div className="food-desc-container">
+                <div className="food-txt-container">
                     <h1 className="roulette-title">What To Eat Roulette Game</h1>
                     <p className="roulette-desc">The roulette game is a fun way to decide what to eat when you're feeling indecisive.
                         Simply select the type of food you're in the mood for, spin the roulette wheel,
@@ -28,7 +28,7 @@ export default function Noodle() {
                     </p>
                 </div>
                 <div className="img-container" onClick={changeBackgroundImg}>
-                    <Link to="/main">
+                    <Link to="/main" className="back-link">
                         <img className="back-img" src={backArrowImg} alt={backArrowImg}/>
                     </Link>
                 </div>
